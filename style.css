@@ -1,0 +1,45 @@
+/* ============================
+   STYLE DES VIGNETTES .thumb
+   ============================ */
+
+.thumb {
+  text-decoration: none;      /* Pas de soulignement */
+  color: inherit;             /* Le texte garde la couleur parent */
+  display: inline-block;      /* Permet dimension + marges */
+  width: 220px;               /* Largeur de la carte */
+  margin: 10px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.thumb figure {
+  margin: 0;
+  border-radius: 10px;        /* Coins arrondis */
+  overflow: hidden;           /* Coupe ce qui dépasse */
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  background: #111;
+}
+
+/* Image responsive en 16:9 avec aspect-ratio */
+.thumb img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;          /* Remplir le cadre proprement */
+}
+
+/* Texte sous l’image */
+.thumb figcaption {
+  padding: 10px;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  background: #fff;
+  color: #111;
+  text-align: left;
+}
+
+/* Effet hover */
+.thumb:hover,
+.thumb:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
